@@ -1,0 +1,34 @@
+footer{
+
+    @extend section;
+    opacity: 1;
+    transform: none;
+    box-sizing: border-box;
+
+    &:before{
+        content: '';
+        display: block;
+        width: 100px;
+        height: 40px;
+        margin: auto;
+        border-top: 1px solid #000;
+    }
+
+    & .footer-logo{
+        margin: auto;
+        display: block;
+        width: 200px;
+        height: 50px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    & a{
+        color: black;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

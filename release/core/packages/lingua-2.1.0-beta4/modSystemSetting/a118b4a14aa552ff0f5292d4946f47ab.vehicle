@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'lingua',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '02f2932576f9fc0c819a8b12a93ab5c6',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'a118b4a14aa552ff0f5292d4946f47ab',
+  'native_key' => 'lingua.debug',
+  'object' => '{"key":"lingua.debug","value":"0","xtype":"combo-boolean","namespace":"lingua","area":"general","editedon":null}',
+);

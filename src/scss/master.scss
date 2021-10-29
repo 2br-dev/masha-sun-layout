@@ -1,0 +1,19 @@
+// import fonts
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@300;500;700&display=swap');
+
+// import frameworks
+@import './framework/materialize';
+@import './framework/materialdesignicons';
+@import './framework/swiper_bundle';
+
+// import custom parts
+@import './parts/vars';
+@import './parts/helpers';
+@import './parts/custom_grid';
+@import './parts/header';
+@import './parts/footer';
+@import './parts/typography';
+
+// import entire pages
+@import './pages/main.scss';
+@import './pages/gallery.scss';

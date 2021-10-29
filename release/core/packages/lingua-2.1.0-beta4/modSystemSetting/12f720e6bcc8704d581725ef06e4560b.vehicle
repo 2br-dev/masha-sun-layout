@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'lingua',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'c8b7ab3d1c57243f11660bcf3e6a3689',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '12f720e6bcc8704d581725ef06e4560b',
+  'native_key' => 'lingua.parents',
+  'object' => '{"key":"lingua.parents","value":"","xtype":"textfield","namespace":"lingua","area":"general","editedon":null}',
+);

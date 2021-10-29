@@ -1,0 +1,18 @@
+$gap: 4vw;
+
+main#gallery{
+    
+    .gallery{
+        
+        column-count: 3;
+        column-gap: $gap;
+
+        @media(max-width: $large){
+            column-count: 2;
+        }
+
+        @media(max-width: $medium){
+            column-count: 1;
+        }
+    }
+}

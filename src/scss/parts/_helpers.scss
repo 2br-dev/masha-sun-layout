@@ -1,0 +1,96 @@
+$gap: 4vw;
+
+body{
+    
+    font-family: 'Commissioner';
+    line-height: 1.6rem;
+    font-weight: 300;
+
+    section{
+        padding: 6vw 0;
+        transition: opacity .4s, transform .4s;
+
+        @media(max-width: $medium){
+            padding: 80px 0;
+        }
+    }
+
+    & .lazy{
+        display: block;
+        width: 100%;
+        display: block;
+        box-sizing: content-box;
+        
+        &[data-src]:not([data-src=""]){
+            background: url(/img/lazy-placeholder.jpg);
+        }
+
+
+    }
+
+    .no-margin{
+        margin: 0 !important;
+    }
+
+    .hidden{
+        display: none;
+    }
+
+    .row.flex{
+        
+        & .col{
+
+            margin-bottom: 1.5rem;;
+
+            & .card{
+                height: 100%;
+            }
+        }
+    }
+
+    & .picture{
+        break-inside: avoid-column;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: $gap;
+        cursor: pointer;
+        background: url(../img/lazy-placeholder.jpg);
+        
+        & .picture-image{
+            background-position: center center;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            &.active{
+                padding-top: 0 !important;
+            }
+        }
+        
+        & .picture-name{
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0 20px;
+            background: rgba(black, .7);
+            color: #fff;
+            transition: opacity .2s, bottom .2s;
+            bottom: 0;
+            opacity: 0;
+            transform-origin: center center;
+        }
+        
+        &:hover{
+            
+            & img{
+                opacity: 1;
+                transform: scale(1.1);
+            }        
+            
+            & .picture-name{
+                opacity: 1;
+                bottom: 20px;
+            }
+        }
+    }
+}

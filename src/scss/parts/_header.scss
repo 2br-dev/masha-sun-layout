@@ -1,0 +1,246 @@
+header{
+    
+    top: 0;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    z-index: 20;
+    height: 54px;
+    line-height: 54px;
+    background: rgba(white, .8);
+    backdrop-filter: blur(16px);
+    padding: 0 20px;
+    
+    & .logo-wrapper{
+        
+        flex-grow: 1;
+        
+        & a.logo{
+            
+            display: inline-block;
+            width: 200px;
+            background-size: 80% auto;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    }
+    
+    & .menu-wrapper{
+        
+        & ul{
+            
+            margin: 0;
+            
+            & li{
+                
+                padding: 0 20px;
+                
+                & a{
+                    display: block;
+                    background: #fff;
+                }
+            }
+        }
+        
+        .language_selector {
+            
+            position: relative;
+            cursor: pointer;
+            
+            & .available-langs {
+
+                position: absolute;
+                right: 0;;
+                z-index: 20;
+                box-shadow: 0 2px 8px rgba(black, .4);
+                border-radius: 4px;
+                overflow: hidden;
+                transition: top .4s, opacity .4s;
+                pointer-events: none;
+                top: calc(100% - 20px);
+                opacity: 0;
+                
+                
+                & li{
+                    
+                    padding: 0;
+                    
+                    & a{
+                        
+                        padding: 0 20px;
+                        
+                        &:hover{
+                            background: #efefef;
+                        }
+                    }
+                }
+            }
+            
+            &:hover .available-langs{
+                
+                top: 100%;
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+    }
+    
+    & .burger-wrapper{
+        
+        position: relative;
+        width: 54px;
+        z-index: 20;
+        
+        & a.menu-trigger{
+            
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            text-align: center;
+            transition: transform .4s, color .2s;
+            position: relative;
+            z-index: 2;
+            color: $text;
+            line-height: 60px;
+            
+            &:before{
+                content: '\F035C';
+                font-family: 'Material Design Icons';
+                transition: color .4s;
+                box-sizing: border-box;
+                font-size: 24px;
+                line-height: 0;
+            }
+        }
+        
+        & .menu-background{
+            
+            display: block;
+            background: url(../img/menu-background.jpg) center center;
+            position: absolute;
+            width: 0vw;
+            height: 0vw;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+            border-radius: 50%;
+            transition: width .6s, height .6s;
+            
+        }
+    }
+    
+    & nav{
+
+        .divider{
+            margin: 30px 0;
+        }
+        
+        & ul{
+            position: fixed;
+            z-index: 20;
+            top: 50vh;
+            left: 50vw;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            
+            & li{
+                
+                transform: translateY(40px);
+                opacity: 0;
+                transition: transform .2s, opacity .2s;
+                margin-bottom: 10px;
+                
+                
+                & a{
+                    border-width: 3px 2px 3px 2px;
+                    border-radius: 6% 12% 20% 9% / 2% 10% 4% 15%;
+                    border-color: #fff;
+                    border-style: solid;
+                    display: block;
+                    text-align: center;
+                    color: #fff;
+                    padding: 0 30px;
+                    line-height: 46px;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    transition: background-color .2s;
+                    
+                    &:hover{
+                        background: rgba(black, .2);
+                    }
+                }
+
+                &.networks{
+                    text-align: center;
+                    line-height: 32px;
+                    
+                    & a{
+                        border: 0;
+                        font-size: 32px;
+                        display: inline;
+                        line-height: 32px;
+                        padding: 0 6px;
+                        margin: 0 10px;
+                    }
+                }
+                
+                @for $i from 1 to 10{
+                    
+                    &:nth-child(#{$i}){
+                        
+                        transition-delay: #{$i * .05s};
+                    }
+                }
+            }
+            
+        }
+    }
+    
+    &.opened{
+        
+        & .burger-wrapper{
+            
+            & a.menu-trigger{
+                
+                color: #fff;
+                transform: rotate(180deg);
+                
+                &:before{
+                    content: '\F0156';
+                    line-height: 0;
+                }
+            }
+                            
+            & .menu-background{
+                width: 280vw;
+                height: 280vw;
+
+                @media(orientation: portrait){
+                    width: 280vh;
+                    height: 280vh;
+                }
+            }
+        }
+        
+        & nav{
+            
+            & ul{
+                
+                pointer-events: all;
+                
+                & li{
+                    
+                    opacity: 1;
+                    transform: none;
+
+                    & a{
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+}

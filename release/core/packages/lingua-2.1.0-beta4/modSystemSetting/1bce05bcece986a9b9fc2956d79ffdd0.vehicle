@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'lingua',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '2244fa240e794b6a70a28299653bd442',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '1bce05bcece986a9b9fc2956d79ffdd0',
+  'native_key' => 'lingua.code_field',
+  'object' => '{"key":"lingua.code_field","value":"lang_code","xtype":"textfield","namespace":"lingua","area":"URL","editedon":null}',
+);

@@ -1,0 +1,1 @@
+[2021-10-29 09:58:10] (ERROR @ C:\!Genesys_archives\Masha_sun\6-08-2021_Layout\!Layout\release\core\model\modx\xmlrss\rssfetch.class.php : 241) User warning: MagpieRSS: Failed to fetch https://forums.modx.com/board.xml?board=294 (Request timed out after 5 seconds)
